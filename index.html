@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сайт о Пушкине</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      color: white;
+      padding: 1em;
+    }
+    nav a {
+      padding: 0.5em 1em;
+      color: white;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background-color: #4CAF50;
+    }
+    main {
+      padding: 2em;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Пушкин</h1>
+  </header>
+  <nav>
+    <a href="#биография">Биография</a>
+    <a href="#стихи">Стихи</a>
+    <a href="#произведения">Произведения</a>
+  </nav>
+  <main>
+    <section id="биография">
+      <h2>Биография</h2>
+      <p>Александр Сергеевич Пушкин (1799-1837) - великий русский поэт, прозаик и драматург, классик русской литературы.</p>
+    </section>
+    <section id="стихи">
+      <h2>Избранные стихи</h2>
+      <ul>
+        <li><a href="#" onclick="showPoem('poem1')">Я помню чудное мгновенье</a></li>
+        <li><a href="#" onclick="showPoem('poem2')">Воздушный тополь, голубь, голубка...</a></li>
+        <li><a href="#" onclick="showPoem('poem3')">Я вас любил: любовь еще, быть может...</a></li>
+      </ul>
+      <div id="poems"></div>
+    </section>
+    <section id="произведения">
+      <h2>Произведения</h2>
+      <ul>
+        <li>Евгений Онегин</li>
+        <li>Капитанская дочка</li>
+        <li>Руслан и Людмила</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>© 2023 Сайт о Пушкине</p>
+  </footer>
+  <script>
+    function showPoem(poemId) {
+      const poems = {
+        poem1: 'Я помню чудное мгновенье...',
+        poem2: 'Воздушный тополь, голубь, голубка...',
+        poem3: 'Я вас любил: любовь еще, быть может...'
+      };
+      document.getElementById('poems').innerText = poems[poemId];
+    }
+  </script>
+</body>
+</html>
+
