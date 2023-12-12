@@ -28,9 +28,11 @@
       padding: 0.5em 1em;
       color: white;
       text-decoration: none;
+      margin: 0 10px;
     }
     nav a:hover {
       background-color: #4CAF50;
+      transition: 0.3s;
     }
     main {
       padding: 2em;
@@ -44,53 +46,78 @@
       bottom: 0;
       width: 100%;
     }
+    section {
+      margin-bottom: 30px;
+    }
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #4CAF50;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Пушкин</h1>
+    <h1>Пушкин Александр Сергеевич</h1>
   </header>
   <nav>
     <a href="#биография">Биография</a>
     <a href="#стихи">Стихи</a>
     <a href="#произведения">Произведения</a>
+    <a href="#аудио">Аудио</a>
   </nav>
   <main>
     <section id="биография">
       <h2>Биография</h2>
-      <p>Александр Сергеевич Пушкин (1799-1837) - великий русский поэт, прозаик и драматург, классик русской литературы.</p>
+      <p>Александр Сергеевич Пушкин (1799-1837) - русский поэт, драматург и прозаик, считается одним из величайших литераторов русской литературы. Он родился в Москве в знатной аристократической семье. Его отец был знаменитым поэтом и государственным деятелем, что сильно повлияло на выбор профессии сына.</p>
+      <!-- Дополнительные абзацы об описании биографии -->
     </section>
     <section id="стихи">
-      <h2>Избранные стихи</h2>
+      <h2>Стихи</h2>
       <ul>
-        <li><a href="#" onclick="showPoem('poem1')">Я помню чудное мгновенье</a></li>
-        <li><a href="#" onclick="showPoem('poem2')">Воздушный тополь, голубь, голубка...</a></li>
-        <li><a href="#" onclick="showPoem('poem3')">Я вас любил: любовь еще, быть может...</a></li>
+        <li><a href="https://www.culture.ru/poems/5828/k-ya-pomnyu-chudnoe-mgnovene">Я помню чудное мгновенье</a></li>
+        <li><a href="#">Воздушный тополь, голубь, голубка</a></li>
+        <li><a href="#">Я вас любил: любовь еще, быть может</a></li>
       </ul>
-      <div id="poems"></div>
     </section>
     <section id="произведения">
       <h2>Произведения</h2>
       <ul>
-        <li>Евгений Онегин</li>
-        <li>Капитанская дочка</li>
-        <li>Руслан и Людмила</li>
+        <li><a href="https://ilibrary.ru/text/436/p.2/index.html">Евгений Онегин</a></li>
+        <li><a href="https://ilibrary.ru/text/107/p.1/index.html">Капитанская дочка</a></li>
+        <li><a href="https://ilibrary.ru/text/440/p.1/index.html">Руслан и Людмила</a></li>
+        <li><a href="https://ilibrary.ru/text/451/p.1/index.html">Медный всадник</a></li>
+      </ul>
+    </section>
+    <section id="аудио">
+      <h2>Аудио</h2>
+      <ul>
+        <li><audio controls><source src="C:\Users\Compik\Downloads\a.mp3" type="audio/mp3">Your browser does not support the audio element.</li>
+        <li><audio controls><source src="" type="audio/mp3">Your browser does not support the audio element.</audio></li>
+        <li><audio controls><source src="" type="audio/mp3">Your browser does not support the audio element.</audio></li>
       </ul>
     </section>
   </main>
   <footer>
     <p>© 2023 Сайт о Пушкине</p>
   </footer>
-  <script>
-    function showPoem(poemId) {
-      const poems = {
-        poem1: 'Я помню чудное мгновенье...',
-        poem2: 'Воздушный тополь, голубь, голубка...',
-        poem3: 'Я вас любил: любовь еще, быть может...'
-      };
-      document.getElementById('poems').innerText = poems[poemId];
-    }
-  </script>
 </body>
 </html>
-
